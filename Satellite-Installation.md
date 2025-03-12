@@ -1,4 +1,4 @@
-## Satellite
+## Satellite Installation
 
 ---
 ### Foreman katello Installation 
