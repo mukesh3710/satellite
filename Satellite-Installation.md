@@ -29,3 +29,5 @@ foreman-maintain service status -b # also check the status
 sudo dnf install -y katello-ca-consumer-latest.noarch.rpm
 subscription-manager register --org="Default_Organization" --activationkey="your-activation-key"
 ```
+---
+# Create a Product for Rocky Linux 9
