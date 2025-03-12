@@ -30,4 +30,13 @@ sudo dnf install -y katello-ca-consumer-latest.noarch.rpm
 subscription-manager register --org="Default_Organization" --activationkey="your-activation-key"
 ```
 ---
-# Create a Product for Rocky Linux 9
+### Create a Product for Rocky Linux 9
+- Navigate to Content → Products -> Click Create Product -> Enter a Name (e.g., "Rocky Linux 9") -> Select an Organization -> Save
+- Add Repositories - Create Repository for BaseOS, AppStream, Extras & EPEL
+- Create a Sync Plan - Content → Sync Plans
+- Associate Repositories with the Sync Plan  - Content → Products → Rocky Linux 9 & Sync the Repositories.
+- Create a Content View - Navigate to Content → Content Views. Create,  Save and Publish the content view.
+- Promote to Lifecycle Environment - After publishing the content view, promote it to an environment (e.g., Library → Dev → Prod).
+- Navigate to Hosts → Lifecycle Environments and verify the promotion.
+- Register Clients: Use the activation key to register Rocky Linux 9 hosts.
+- Enable Auto-Sync: Ensure periodic syncing to keep repositories updated.
